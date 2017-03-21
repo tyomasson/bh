@@ -7,6 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time
 import unittest, time, re
 
 
@@ -37,10 +38,12 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_id("location").clear()
         driver.find_element_by_id("location").send_keys("London")
         driver.find_element_by_id("b1a8b96daab5065cf4a08f953e577c34cdf769c0").click()
+        time.sleep(1)
         driver.find_element_by_css_selector("div.problem-image.battery").click()
-    #    driver.find_element_by_css_selector("div.problem-image.battery").click()
+        driver.find_element_by_css_selector("div.problem-image.battery").click()
         driver.find_element_by_xpath("//div[3]/button").click()
-       # driver.find_element_by_xpath("//div[3]/button").click()
+        time.sleep(1)
+        #driver.find_element_by_xpath("//div[3]/button").click()
         driver.find_element_by_id("vehicle_registration").click()
         driver.find_element_by_id("vehicle_registration").clear()
         driver.find_element_by_id("vehicle_registration").send_keys("234dle")
@@ -48,6 +51,7 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_id("mobile").send_keys("2222222")
         driver.find_element_by_xpath("//div[3]/div/button").click()
         driver.find_element_by_xpath("//div[3]/div/button").click()
+        time.sleep(1)
         driver.find_element_by_id("first_name").clear()
         driver.find_element_by_id("first_name").send_keys("Art")
         driver.find_element_by_id("last_name").clear()
@@ -65,18 +69,22 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_id("cvv").clear()
         driver.find_element_by_id("cvv").send_keys("121")
         driver.find_element_by_xpath("//button[@type='submit']").click()
+        time.sleep(5)
         driver.find_element_by_xpath("//ion-nav-view/ion-view/ion-footer-bar/button").click()
-        driver.find_element_by_xpath("//ion-nav-view/ion-view/ion-footer-bar/button").click()
-        driver.find_element_by_css_selector("div.list-element.activated > label").click()
-        driver.find_element_by_css_selector("div.list-element.activated > label").click()
+     #   driver.find_element_by_xpath("//ion-nav-view/ion-view/ion-footer-bar/button").click()
+       # driver.find_element_by_css_selector("div.list-element.activated > label").click()
+       # driver.find_element_by_class_name("fa-chevron-right").click()
+        driver.find_element_by_xpath(".//div[@class='layout-wrapper']//div[2]").click()
+      #  driver.find_element_by_css_selector("div.list-element.activated > label").click()
         driver.find_element_by_id("anything").clear()
         driver.find_element_by_id("anything").send_keys("test")
+       # driver.find_element_by_xpath("//ion-view[3]/ion-footer-bar/button").click()
         driver.find_element_by_xpath("//ion-view[3]/ion-footer-bar/button").click()
-        driver.find_element_by_xpath("//ion-view[3]/ion-footer-bar/button").click()
-        driver.find_element_by_xpath("(//input[@name='more-info'])[2]").click()
-        driver.find_element_by_xpath("//div[3]/div[2]/div/div[2]/label/span").click()
+        driver.find_element_by_xpath("(//div/label[@class='ng-binding'])[1]").click()
+       # driver.find_element_by_css("span.visible-radio").click()
+       # driver.find_element_by_xpath("//ion-view[4]/ion-footer-bar/button").click()
         driver.find_element_by_xpath("//ion-view[4]/ion-footer-bar/button").click()
-        driver.find_element_by_xpath("//ion-view[4]/ion-footer-bar/button").click()
+        time.sleep(5)
 
     def is_element_present(self, how, what):
         try:
