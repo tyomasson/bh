@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Create Battery job
+# Create Battery job for Flow A
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -44,11 +44,11 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_xpath("//div[3]/div/button").click()
         time.sleep(1)
         driver.find_element_by_id("first_name").clear()
-        driver.find_element_by_id("first_name").send_keys("Art")
+        driver.find_element_by_id("first_name").send_keys("Auto")
         driver.find_element_by_id("last_name").clear()
-        driver.find_element_by_id("last_name").send_keys("Bond")
+        driver.find_element_by_id("last_name").send_keys("Test")
         driver.find_element_by_id("card_number").clear()
-        driver.find_element_by_id("card_number").send_keys("5555 5555 5555 4444")
+        driver.find_element_by_id("card_number").send_keys("4242 4242 4242 4242")
         driver.find_element_by_id("date").clear()
         driver.find_element_by_id("date").send_keys("12 / 21")
         driver.find_element_by_id("cvv").clear()
