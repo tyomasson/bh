@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Create Battery job for Flow A
+# Create Battery job for Flow A_
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -54,7 +54,7 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_id("cvv").clear()
         driver.find_element_by_id("cvv").send_keys("121")
         driver.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(5)
+        time.sleep(3)
         driver.find_element_by_xpath("//ion-nav-view/ion-view/ion-footer-bar/button").click()
         driver.find_element_by_xpath(".//div[@class='layout-wrapper']//div[2]").click()
         driver.find_element_by_id("anything").clear()
@@ -62,7 +62,7 @@ class Bh1(unittest.TestCase):
         driver.find_element_by_xpath("//ion-view[3]/ion-footer-bar/button").click()
         driver.find_element_by_xpath("(//div/label[@class='ng-binding'])[1]").click()
         driver.find_element_by_xpath("//ion-view[4]/ion-footer-bar/button").click()
-        time.sleep(5)
+        time.sleep(1)
 
     def is_element_present(self, how, what):
         try:
